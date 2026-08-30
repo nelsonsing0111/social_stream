@@ -357,8 +357,9 @@ body.gaming .message-container { text-shadow: 0 0 6px rgba(0,200,255,0.55), 0 0 
         `;
 
         messageContainer.appendChild(messageDiv);
-        chatContainer.prepend(messageContainer);
-        
+        // chatContainer.prepend(messageContainer);
+        chatContainer.appendChild(messageContainer);
+		
         // Auto-scroll to the latest message
         chatContainer.scrollTop = chatContainer.scrollHeight;
 
