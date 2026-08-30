@@ -80,6 +80,8 @@ span:empty,
 	font-size: clamp(0.85em, 2.5vw, 1.1em);
 	min-width: 1.9em;
 	width: auto;
+	background:none !important;
+    box-shadow:none !important;
 }
 
 .username-box span {
@@ -369,7 +371,7 @@ body.gaming .message-container { text-shadow: 0 0 6px rgba(0,200,255,0.55), 0 0 
 
         // Construct the HTML for each message
         messageDiv.innerHTML = `
-            <div class="username-box" style="background: linear-gradient(90deg, ${chroma(data.nameColor || "#555").desaturate(1).alpha(0.9)}, ${chroma(data.nameColor || "#555").desaturate(2).alpha(0.9)});">
+            <div class="username-box">
                 ${data.chatimg ? `<div class="avatar-wrapper"><div class="avatar" style="background-image: url('${data.chatimg}');"></div></div>` : ''}
                 <img class="source-icon"src="https://socialstream.ninja/sources/images/${data.type}.png">
 				<span>${data.chatname}</span>
