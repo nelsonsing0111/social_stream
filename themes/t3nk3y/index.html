@@ -148,6 +148,13 @@ span:empty,
 	border-radius: 1em;
 }
 
+.source-icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+
 @keyframes slideFadeIn {
 	to {
 		opacity: 1;
@@ -364,7 +371,8 @@ body.gaming .message-container { text-shadow: 0 0 6px rgba(0,200,255,0.55), 0 0 
         messageDiv.innerHTML = `
             <div class="username-box" style="background: linear-gradient(90deg, ${chroma(data.nameColor || "#555").desaturate(1).alpha(0.9)}, ${chroma(data.nameColor || "#555").desaturate(2).alpha(0.9)});">
                 ${data.chatimg ? `<div class="avatar-wrapper"><div class="avatar" style="background-image: url('${data.chatimg}');"></div></div>` : ''}
-                <span>${data.chatname}</span>
+                <img class="source-icon"src="https://socialstream.ninja/sources/images/${data.type}.png">
+				<span>${data.chatname}</span>
                 <div class="badges">${chatbadges}</div>
             </div>
 			<div class="message" style="background: linear-gradient(90deg, ${chroma(data.nameColor || "#555").desaturate(4).darken(1).alpha(0.8)}, ${chroma(data.nameColor || "#555").desaturate(3).darken(1).alpha(0.8)})">
